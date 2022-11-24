@@ -46,7 +46,7 @@ $routes->get('/', 'Home::index');
 
 $routes->post('/api/fimon/users', 'FimonC::post_data_user');
 $routes->get('/api/fimon/users', 'FimonC::get_data_users');
-$routes->get('/api/fimon/users/(:segment)/(:segment)', 'FimonC::get_data_by');
+$routes->get('/api/fimon/users/(:segment)/(:segment)', 'FimonC::get_data_user_by');
 $routes->put('/api/fimon/users/(:segment)', 'FimonC::put_data_user');
 $routes->delete('/api/fimon/users/(:segment)', 'FimonC::delete_data_user');
 
