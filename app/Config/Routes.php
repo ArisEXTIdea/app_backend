@@ -50,6 +50,14 @@ $routes->get('/api/fimon/users/(:segment)/(:segment)', 'FimonC::get_data_user_by
 $routes->put('/api/fimon/users/(:segment)', 'FimonC::put_data_user');
 $routes->delete('/api/fimon/users/(:segment)', 'FimonC::delete_data_user');
 
+//       ***              Transaction Routes          ***           //
+
+$routes->post('/api/fimon/trx', 'FimonC::post_data_trx');
+$routes->get('/api/fimon/trx', 'FimonC::get_data_trx');
+$routes->get('/api/fimon/trx/(:segment)/(:segment)', 'FimonC::get_data_trx_by');
+$routes->put('/api/fimon/trx/(:segment)', 'FimonC::put_data_trx');
+$routes->delete('/api/fimon/trx/(:segment)', 'FimonC::delete_data_trx');
+
 
 // -----------------------------------------------------------------------------//
 

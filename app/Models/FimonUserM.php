@@ -5,7 +5,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 
-class FimonM extends Model{
+class FimonUserM extends Model{
     protected $table = 'users';
     protected $allowedFields = ['uid', 'name', 'email', 'photo', 'user_level', 'account_type'];
     
@@ -27,6 +27,7 @@ class FimonM extends Model{
     }
 
     public function put_data_user($uid, $newData){
+        $this->setDatabase(getenv('FIMON_DATABASE'));
         $keys = array_keys($newData);
         for($i = 0; $i < count($keys); $i++) {
             $this->set($keys[$i], $newData[$keys[$i]] );
@@ -36,6 +37,7 @@ class FimonM extends Model{
     }
 
     public function delete_data_user($uid){
+        $this->setDatabase(getenv('FIMON_DATABASE'));
         $this->where('uid', $uid);
         $this->delete();
     }
